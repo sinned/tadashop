@@ -48,7 +48,6 @@ add_thickbox();
 wp_enqueue_script( 'plugin-install' );
 
 require_once( ABSPATH . 'wp-admin/admin-header.php' );
-ini_set('memory_limit','16M');
 $parent_file = 'tools.php';
 ?>
 
