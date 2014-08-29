@@ -1,5 +1,11 @@
 	</div><!-- #main -->
 
+	<div>
+		<center><h2>Popular Tags</h2></center>
+		<?php wp_tag_cloud( $args ); ?>
+		<br /><br />
+	</div>
+
 	<div id="footer">
 		<div id="site-info">
 			© 2014 <a href="/"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a><br />
