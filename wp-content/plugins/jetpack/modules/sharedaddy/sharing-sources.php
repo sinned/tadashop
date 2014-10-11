@@ -1113,7 +1113,7 @@ class Share_Pinterest extends Sharing_Source {
 
 	public function get_display( $post ) {
 		if ( $this->smart )
-			return '<div class="pinterest_button"><a href="' . esc_url( 'http://pinterest.com/pin/create/button/?url=' . rawurlencode( $this->get_share_url( $post->ID ) ) . '&description=' . rawurlencode( $post->post_title ) ) .'&media=' . rawurlencode($this->get_the_post_thumbnail( $post->ID )) . '" data-pin-do="buttonBookmark" ><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a></div>';
+			return '<div class="pinterest_button"><a href="' . esc_url( 'http://pinterest.com/pin/create/button/?url=' . rawurlencode( $this->get_share_url( $post->ID ) ) . '&description=' . rawurlencode( $post->post_title ) ) .'" data-pin-do="buttonBookmark" ><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a></div>';
 		else
 			return $this->get_link( get_permalink( $post->ID ), _x( 'Pinterest', 'share to', 'jetpack' ), __( 'Click to share on Pinterest', 'jetpack' ), 'share=pinterest' );
 	}
@@ -1124,7 +1124,7 @@ class Share_Pinterest extends Sharing_Source {
 
 		// If we're triggering the multi-select panel, then we don't need to redirect to Pinterest
 		if ( !isset( $_GET['js_only'] ) ) {
-			$pinterest_url = esc_url_raw( 'http://pinterest.com/pin/create/button/?url=' . rawurlencode( $this->get_share_url( $post->ID ) ) . '&description=' . rawurlencode( $this->get_share_title( $post->ID ) ) . '&media=' . rawurlencode($this->get_the_post_thumbnail( $post->ID )) );
+			$pinterest_url = esc_url_raw( 'http://pinterest.com/pin/create/button/?url=' . rawurlencode( $this->get_share_url( $post->ID ) ) . '&description=' . rawurlencode( $this->get_share_title( $post->ID ) ) );
 			wp_redirect( $pinterest_url );
 		} else {
 			echo '// share count bumped';
