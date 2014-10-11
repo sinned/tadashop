@@ -1124,7 +1124,7 @@ class Share_Pinterest extends Sharing_Source {
 
 		// If we're triggering the multi-select panel, then we don't need to redirect to Pinterest
 		if ( !isset( $_GET['js_only'] ) ) {
-			$pinterest_url = esc_url_raw( 'http://pinterest.com/pin/create/button/?url=' . rawurlencode( $this->get_share_url( $post->ID ) ) . '&description=' . rawurlencode( $this->get_share_title( $post->ID ) ) );
+			$pinterest_url = esc_url_raw( 'http://pinterest.com/pin/create/button/?url=' . rawurlencode( $this->get_share_url( $post->ID ) ) . '&description=' . rawurlencode( $this->get_share_title( $post->ID ) ) . '&media=' . rawurlencode($this->get_the_post_thumbnail( $post->ID )) );
 			wp_redirect( $pinterest_url );
 		} else {
 			echo '// share count bumped';
