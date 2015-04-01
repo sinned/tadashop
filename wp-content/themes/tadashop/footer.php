@@ -8,7 +8,7 @@
 
 	<div id="footer">
 		<div id="site-info">
-			© 2014 <a href="/"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a><br />
+			© 2015 <a href="/"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a><br />
 			<span class="main_separator">/</span>
 			Powered by <a href="http://www.wordpress.org" target="_blank">WordPress</a>
 		</div><!-- #site-info -->
